@@ -1,0 +1,18 @@
+<div class="table-responsive">
+    <table class="table fonte">
+        <tbody>
+            <tr>
+                <th style="width:50%">Itens:</th>
+                <td class="text-right">{{itensValue | currency: 'EUR'}}</td>
+            </tr>
+            <tr>
+                <th>Frete:</th>
+                <td class="text-right">{{delivery | currency: 'EUR'}}</td>
+            </tr>
+            <tr>
+                <th>Total:</th>
+                <td class="text-right">{{total() | currency: 'EUR'}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

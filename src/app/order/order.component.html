@@ -1,0 +1,115 @@
+<div class=" bg-light divMaster"><br>
+    <h2 class="mb-5"> <i class="fa fa-shopping-cart "></i> Finalize seu pedido</h2>
+    <h3 class="text-muted mb-3">Dados: </h3>
+    
+    <form [formGroup]="orderForm" novalidate>
+
+          <!--Nome-->
+          
+        <div class="row form-group">
+            <div class="col-sm-6 mb-2">
+                <input type="text" class="form-control " #name  formControlName="name" 
+                 placeholder="Nome">
+                 <div *ngIf="!this.orderForm.get('name').valid && this.orderForm.get('name').touched"
+                  class="alert-danger campoObg">*Campo Obrigatório</div>
+                  <div *ngIf="this.orderForm.get('name').valid && this.orderForm.get('name').touched"
+                  class="alert-success campoObg"><i class="fa fa-check"></i> Ok</div>
+            </div>
+            <!--Email-->
+            <div class="col-sm-3 mb-2">
+                <input type="text" class="form-control " #email formControlName="email" 
+                 placeholder="E-mail" >
+                 <div *ngIf="!this.orderForm.get('email').valid && this.orderForm.get('email').touched"
+                  class="alert-danger campoObg">* Email inválido</div>
+                  <div *ngIf="this.orderForm.get('email').valid && this.orderForm.get('email').touched"
+                  class="alert-success campoObg"><i class="fa fa-check"></i> Ok</div>
+            </div>
+              <!--Confirmação Email-->
+              <div class="col-sm-3 mb-2">
+                <input type="text" class="form-control " #emailConfirmation formControlName="emailConfirmation" 
+                 placeholder="Confirmação de Email" >
+                 <div *ngIf="!this.orderForm.get('emailConfirmation').valid && this.orderForm.get('emailConfirmation').touched"
+                  class="alert-danger campoObg">* Email inválido</div>
+                  <div *ngIf="this.orderForm.get('emailConfirmation').valid && this.orderForm.get('emailConfirmation').touched"
+                  class="alert-success campoObg"><i class="fa fa-check"></i> Ok</div>
+            </div>
+        </div>
+        <h3 class="text-muted mb-3">Endereço de entrega:</h3>
+        <div class="row form-group">
+            
+            <!--RUA-->
+            <div class="col-sm-6">
+                <input type="text" class="form-control " #adress formControlName="adress" 
+                 placeholder="Endereço" >
+                 <div  *ngIf="!this.orderForm.get('adress').valid && this.orderForm.get('adress').touched"
+                  class="alert-danger campoObg">*Campo Obrigatório</div>
+                  <div  *ngIf="this.orderForm.get('adress').valid && this.orderForm.get('adress').touched"
+                  class="alert-success campoObg"><i class="fa fa-check"></i> Ok</div>
+            </div>
+           
+            <!--Numero-->
+            <div class="col-sm-2">
+                <input type="text" class="form-control " #number formControlName="number" 
+                 placeholder="Número">
+                 <div *ngIf="!this.orderForm.get('number').valid && this.orderForm.get('number').touched"
+                  class="alert-danger campoObg2">*Campo Obrigatório e somente números</div>
+                  <div *ngIf="this.orderForm.get('number').valid && this.orderForm.get('number').touched"
+                  class="alert-success campoObg"><i class="fa fa-check"></i> Ok</div>
+            </div>
+            <!--Complemento-->
+            <div class="col-sm-4">
+                <input type="text" class="form-control "  formControlName="optional" 
+                 placeholder="Complemento">
+            </div>        
+        </div>
+  
+    <h3 class="text-muted mb-4 mt-3">Ítens do pedido:</h3>
+
+<!-- ==================== TABELA ITENS ======================-->
+    <div>
+        <app-order-itens 
+        [itens]="carItens()"
+            (increaseQty)="increaseQty($event)"
+            (decreaseQty)="decreaseQty($event)"
+            (remove)="remove($event)">
+        </app-order-itens>
+    </div>
+<!-- ======================================================-->
+
+    <div class="row">
+       
+        <!-- ==================== OPÇÕES DE PAGAMENTO ======================-->
+        <div class="col-6">
+            <h3 class="text-muted mb-4 mt-3">Formas de pagamento</h3>
+            <div class="form-group">
+              
+                <app-radio [options]="options" formControlName="paymentOptions" 
+                ></app-radio>               
+            
+            </div>
+                <!-- ============================================================-->
+
+        </div>
+ <!-- ==========================FRETE e TOTAL==================================-->
+
+        <div class="col-6">
+            <h3 class="text-muted mb-4 mt-5">Frete e Total:</h3>
+            <app-delivery-costs 
+                [itensValue]="itensValue()" [delivery]="delivery">                
+            </app-delivery-costs>
+        </div>
+      </div>
+
+      <div class="row">
+          <div class="col-12 text-right">
+              <button (click)="checkOrder(orderForm.value)" class="btn btn-success "
+              [disabled]="!orderForm.valid || carItens().length === 0">
+              <i class="fa fa-credit-card "></i> Concluir Compra
+            </button>
+          </div>
+      </div>
+ <!-- ============================================================-->
+    </form>
+
+</div>
+ 

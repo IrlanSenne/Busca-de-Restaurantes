@@ -1,0 +1,29 @@
+img{
+    width: 50px;
+}
+.icon{
+    font-size: 20px;
+    
+}
+h5{
+    font-weight: bold;
+}
+.coluna{
+    position: relative;
+    width: 400px;
+    height: 200px;
+}
+h1{
+    font-weight: bold;
+    color: rgb(61, 49, 49);
+    font-family: 'Baloo Chettan 2', cursive;
+}
+.master{
+    padding: 10px;
+}
+.fonte {
+    font-family: 'Baloo Chettan 2', cursive;
+}
+p{
+    font-family: 'Baloo Chettan 2', cursive;
+}

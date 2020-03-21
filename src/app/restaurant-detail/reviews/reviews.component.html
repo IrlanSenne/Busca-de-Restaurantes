@@ -1,0 +1,32 @@
+ <div class="text-center mb-4 fonte">
+ <h1>Avaliações</h1>
+</div>
+ <div class="row" >
+
+<div class="col-6 " *ngFor="let review of reviews | async" >
+<div class="bg-light master" [@menuItemAppeared]="menuItemState">
+  <div class="row">
+    <div class="col-3">
+      <img alt="User Image" class="img-circle" [src]="getImage(review.rating)">
+    </div>
+    <div class="col">
+
+      <div class="row">
+        <div class="col-9 text-left ">
+          <h5>{{review.name}}</h5>
+          <p class="text-muted">{{ review.date | date:'dd/MM/yyyy' }}</p>
+        </div>
+        <div class="col">
+          <strong class="float-right icon"><i class="fa fa-star"></i> {{review.rating}}</strong>
+        </div>
+      </div>
+    
+    </div>
+  </div>
+  <p>"{{ review.comments }}"</p>
+</div><br>
+</div>
+
+   </div>
+
+ 

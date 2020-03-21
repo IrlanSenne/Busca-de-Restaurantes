@@ -1,0 +1,17 @@
+
+
+  <div  class="card text-center ml-4" [@restaurantAppeared]="restaurantState" style="width: 18rem;">
+    <img [src]="restaurant.imagePath"  class="card-img-top" >
+    <div class="card-body">
+      <span class="float right"><strong><i class="fas fa-star"></i> {{restaurant.rating}}</strong></span>    
+      <h5 class="card-title"><b>{{restaurant.name | uppercase}}</b></h5> 
+      <p id="p1" class="card-text">{{restaurant.category}}</p>  
+      <span id="p1"><b>{{restaurant.deliveryEstimate}}</b></span><br>
+      <a [routerLink]="['/restaurants',restaurant.key]" 
+      class="btn btn-danger">{{restaurant.name}}</a>
+    </div>
+  </div><br>
+
+  
+
+  

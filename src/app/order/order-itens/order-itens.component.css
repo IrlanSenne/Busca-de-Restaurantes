@@ -1,0 +1,12 @@
+.campoObg{
+    font-size: 12px;
+}
+.ng-invalid.ng-touched.ng-dirty:not(form) {
+    border: 1px solid #f00;
+}
+.ng-valid.ng-touched:not(form) {
+    border: 1px solid rgb(28, 112, 28);
+}
+.fonte{
+    font-family: 'Baloo Chettan 2', cursive;
+}

@@ -1,0 +1,28 @@
+<!-- INíCIO do CONTEÚDO -->
+<section class="content-header fonte">
+    <h2 class="text-muted">
+      Todos os Restaurantes
+    </h2>
+  </section>
+  
+  
+  <section >
+   
+    <div class="row text-center ">
+  
+            <div *ngFor="let restaurant of restTeste | async;index as i" id="divRests"  class="ml-5 ">
+     
+          <app-restaurant  [restaurant]="restaurant"></app-restaurant> 
+
+    
+           
+            </div>  
+          
+     </div>
+    
+  </section>
+  
+  <!-- FIM  do CONTEÚDO -->
+  
+
+  

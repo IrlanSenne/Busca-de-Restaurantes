@@ -1,0 +1,14 @@
+<p>
+    <i (click)="avaliar(1)" (mouseenter)="enterMouse(1)" (mouseleave)="leaveMouse(1)" class="fa fa-star"></i>
+    <i (click)="avaliar(2)" (mouseenter)="enterMouse(2)" (mouseleave)="leaveMouse(1)" *ngIf="!mostra2" class="fa fa-star"></i>
+    <i (click)="avaliar(3)" (mouseenter)="enterMouse(3)" (mouseleave)="leaveMouse(1)" *ngIf="!mostra3" class="fa fa-star"></i>
+    <i (click)="avaliar(4)" (mouseenter)="enterMouse(4)" (mouseleave)="leaveMouse(1)" *ngIf="!mostra4" class="fa fa-star"></i>
+    <i (click)="avaliar(5)" (mouseenter)="enterMouse(5)" (mouseleave)="leaveMouse(1)" *ngIf="!mostra5" class="fa fa-star"></i>
+
+    <i *ngIf="mostra2" class="far fa-star"></i>
+    <i *ngIf="mostra3" class="far fa-star"></i>
+    <i *ngIf="mostra4" class="far fa-star"></i>
+    <i *ngIf="mostra5" class="far fa-star"></i>
+   
+  </p>      
+<p *ngIf="start" class="text-muted">Obrigado pela sua avaliação !</p>

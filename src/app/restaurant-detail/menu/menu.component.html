@@ -1,0 +1,18 @@
+  <div class="row fonte"  [@cartAppeared]="cartState">
+    
+    <div class="col-md-9 " >
+     <!--========================= PRODUTOS ================================-->
+   
+     <div class="row" *ngFor="let itens of menu | async">
+        <mt-menu-item (add)="shoppingCart.addItem($event)" [menuItem]="itens"></mt-menu-item>
+      </div>
+
+    </div>
+    <div class="col-md-3 ">
+  
+    <div id="divCart" [ngStyle]="{'background-color':'white', padding: '5px', width: '260px'}">
+      <mt-shoping-cart #shoppingCart></mt-shoping-cart>
+    </div>
+  </div>
+  </div>
+

@@ -1,0 +1,4 @@
+<div *ngFor="let option of options" >
+    <input (click)="setValue(option.value)" type="radio" name="r3" class="text-danger mb-3" 
+     [class.checked]="option.value === value" /> {{option.label}}
+</div>

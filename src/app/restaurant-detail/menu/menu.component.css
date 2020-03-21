@@ -1,0 +1,28 @@
+@media  (min-width: 800.1px) and (max-width: 1000px){
+    #divCart{
+      position: relative;
+      top: 500px;
+      left: -280px;
+       
+     }
+  
+}
+
+img{
+    width: 70px;
+}
+span{
+    font-size: 15px;
+}
+h6{
+    font-weight: bold;
+}
+h1{
+    color: rgb(73, 57, 57);
+    font-weight: bolder;
+}
+.fonte{
+    font-family: 'Baloo Chettan 2', cursive;
+    position: relative;
+    
+}

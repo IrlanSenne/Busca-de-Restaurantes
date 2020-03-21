@@ -1,0 +1,18 @@
+
+<div class="row maxWid col-12 master" id="maxWid" [@menuItemAppeared]="menuItemState">
+  <div class="col-3 ">
+    <span class=""><img [src]="menuItem.imagePath"></span>
+  
+  </div>
+  
+  <div class="col-9">
+    <div class="">
+      <h6 class="">{{menuItem.name}}</h6>
+      <span class="">{{menuItem.description}}</span>
+    <p> <strong class="mr-5"> {{menuItem.price | currency: 'EUR'}} </strong> 
+       <a class="btn btn-defautl text-primary" 
+       (click)="emitAddEvent()"> <i class="fa fa-plus-circle"></i> Adicionar</a></p>
+     
+    </div>
+  </div>
+</div><br>

@@ -1,0 +1,51 @@
+<!--INICIO DO CARRINHO-->
+
+<div class="row master" >
+  <div class="col-3">
+    <i class="fa fa-shopping-cart corI"></i>
+  </div>
+  <div class="col-9">
+    <h3 class="">Carrinho</h3>
+  </div>
+</div>
+<div *ngIf="!itens().length">
+  <p class="text-center">
+    Seu Carrinho está vazio...
+  </p>
+</div>
+  
+    <table class="table" *ngIf="itens().length">
+      <tbody>
+      <tr [@row]="rowState" *ngFor="let item of itens()">
+        <th style="width:60%">({{item.quantity}} x ) {{ item.menuItem.name }}</th>
+        <td class="text-right">{{ item.value() | currency: 'EUR' }}</td>
+        <td class="text-right">
+          <button type="button" class="close text-danger" aria-label="Close"
+           (click)="removeItem(item)" title="Remover">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </td>
+      </tr>     
+      <tr>
+        <th>Total:</th>
+        <td class="text-right">{{total() | currency: 'EUR'}}</td>
+      </tr>
+    </tbody></table>
+
+  <!-- /.box-header -->
+ 
+
+  <div class="row master2" *ngIf="itens().length">
+    <div class="col">
+      <button (click)="clear()" type="button" class="btn btn-sm btn-danger botaoSuccess "><i class="fa fa-trash"></i> Limpar</button>
+    </div>
+    <div class="col">
+      <a [routerLink]="['/order']" class="btn btn-success botaoSuccess "><i class="fa fa-credit-card"></i> Finalizar</a>
+    </div>
+  </div>
+     
+
+  
+ 
+
+<!-- FIM DO CARRINHO -->

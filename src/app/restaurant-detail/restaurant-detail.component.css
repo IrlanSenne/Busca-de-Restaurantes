@@ -1,0 +1,26 @@
+
+
+#img1{
+    width: 150px;
+   }
+
+#divMaster{
+    padding: 15px;
+    margin-top: 30px;
+    box-shadow: 5px 5px 20px 5px;
+    background-color: #FFF;
+    
+}
+h3{
+    color: rgba(7, 6, 6, 0.6);
+    font-weight: bold;
+}
+h6{
+    font-weight: bold;
+}
+a{
+    border-radius: 10px;
+}
+.fonte{
+    font-family: 'Baloo Chettan 2', cursive;
+}

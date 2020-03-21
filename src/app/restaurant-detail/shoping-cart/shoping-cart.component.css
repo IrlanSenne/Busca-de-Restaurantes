@@ -1,0 +1,28 @@
+@media  (min-width: 800.1px) and (max-width: 1000px){
+  table{
+      margin: 20px;
+  }
+}
+.botaoSuccess{
+    width: 110px;
+    height: 40px;
+    font-size: 13px;
+  
+}
+h3{
+    font-weight: bold;
+}
+.corI{
+    color: brown;
+    font-size: 30px;
+}
+table{
+    font-family: 'Baloo Chettan 2', cursive;
+}
+.master{
+    padding: 30px;
+  
+}
+.master2{
+    padding: 0px;
+}

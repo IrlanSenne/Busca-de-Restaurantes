@@ -1,0 +1,50 @@
+@media  (min-width: 0px) and (max-width: 500px){
+    #maxWid{
+        margin-left: 18px;
+        width: 400px;
+        box-shadow: 2px 2px 10px 2px rgb(148, 61, 61);
+     }
+  
+}
+@media  (min-width: 500.1px) and (max-width: 800px){
+    #maxWid{
+        margin-left: 18px;
+        width: 500px;
+        box-shadow: 2px 2px 10px 2px rgb(148, 61, 61);
+     }
+  
+}
+@media  (min-width: 800.1px) and (max-width: 1000px){
+    #maxWid{
+       
+        position: relative;
+        margin-right: 38px;
+       width: 700px;      
+        box-shadow: 2px 2px 10px 2px rgb(148, 61, 61);
+     }
+  
+}
+
+img{
+    width: 70px;
+}
+span{
+    font-size: 15px;
+}
+h6{
+    font-weight: bold;
+}
+h1{
+    color: rgb(73, 57, 57);
+    font-weight: bolder;
+}
+
+.maxWid{
+    width: 800px;
+    background-color: white;
+    padding: 15px;
+    box-shadow: 5px 5px 30px 5px rgb(148, 61, 61);
+ }
+ .master{
+    font-family: 'Baloo Chettan 2', cursive;
+ }

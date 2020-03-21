@@ -1,0 +1,19 @@
+.divMaster{
+    margin: 30px;
+    padding: 30px;
+    font-family: 'Baloo Chettan 2', cursive;
+}
+.ng-invalid.ng-touched:not(form) {
+    border: 1px solid #f00;
+}
+.ng-valid.ng-touched:not(form) {
+    border: 1px solid rgb(28, 112, 28);
+}
+.campoObg{
+    font-size: 12px;
+    
+}
+.campoObg2{
+    font-size: 12px;
+    text-align: center;
+}
